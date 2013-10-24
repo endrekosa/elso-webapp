@@ -17,5 +17,17 @@
   </dependencies>
   <build>
     <finalName>elso-webapp</finalName>
+                <plugins>
+                        <!-- Maven Tomcat Plugin -->
+                        <plugin>
+                                <groupId>org.codehaus.mojo</groupId>
+                                <artifactId>tomcat-maven-plugin</artifactId>
+                                <configuration>
+                                        <url>http://localhost:8080/manager/text</url>
+                                        <server>TomcatServer</server>
+                                        <path>/elso-webapp</path>
+                                </configuration>
+                        </plugin>
+                </plugins>
   </build>
 </project>
